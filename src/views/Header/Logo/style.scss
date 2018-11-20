@@ -1,0 +1,12 @@
+.logo {
+  $logo-size: $height-header *2/3;
+  height: $logo-size;
+  line-height: $logo-size;
+  background-position: left center;
+  background-image: url(./logo.svg);
+  background-size: $logo-size $logo-size;
+  text-indent: $logo-size;
+  background-repeat: no-repeat;
+  font-size: $font-size-base + 4px;
+  color: $heading-color;
+}

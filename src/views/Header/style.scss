@@ -1,0 +1,10 @@
+.header{
+  height: $height-header;
+  background-color: #fff;
+  box-shadow: 0 2px 2px $border-color-base;
+  margin-bottom: 4px;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
