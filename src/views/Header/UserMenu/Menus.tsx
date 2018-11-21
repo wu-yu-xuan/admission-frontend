@@ -50,7 +50,7 @@ function useLogout() {
   const user = React.useContext(userContext);
   return async (e: React.MouseEvent) => {
     const json = await ajax({
-      url: 'logout',
+      url: 'user/logout',
       method: 'POST'
     });
     if (json.code === Code.success) {
