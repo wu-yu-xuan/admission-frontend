@@ -1,0 +1,10 @@
+{
+  "request": {
+    "username": "username",
+    "password": "password"
+  },
+  "response": {
+    "code": 0,
+    "data": {}
+  }
+}

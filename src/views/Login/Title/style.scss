@@ -1,0 +1,41 @@
+.container {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.title {
+  font-size: $font-size-base * 2;
+  font-weight: bold;
+}
+
+.hr {
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, .2), $primary-color 40px, rgba(255, 255, 255, .2) 40px, rgba(255, 255, 255, .2));
+  height: 2px;
+  animation-name: hr-transition;
+  animation-delay: 2s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.detail {
+  font-size: $font-size-base * 1.5;
+  line-height: 40px;
+  color: #314659;
+  margin-bottom: .3em;
+}
+
+@keyframes hr-transition {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
