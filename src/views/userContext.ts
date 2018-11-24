@@ -2,8 +2,8 @@ import * as React from 'react';
 
 export enum Identity {
   student,
-  admissionOffice,
-  collegeAdmisson,
+  office,
+  college,
   unknown
 }
 

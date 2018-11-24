@@ -1,11 +1,11 @@
 {
-  "request":{},
-  "response":{
-    "code":0,
-    "data":{
-      "isLogin":true,
-      "name":"admin",
-      "identity":3
+  "request": {},
+  "response": {
+    "code": 0,
+    "data": {
+      "isLogin": true,
+      "name": "admin",
+      "identity": 0
     }
   }
 }
