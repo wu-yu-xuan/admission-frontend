@@ -1,0 +1,7 @@
+{
+  "description": "获取是否允许填报志愿code为0允许",
+  "request": {},
+  "response": {
+    "code": 0
+  }
+}

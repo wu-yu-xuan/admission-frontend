@@ -1,0 +1,16 @@
+.forbidden {
+  font-size: $font-size-base * 1.5;
+  height: $font-size-base * 3;
+  line-height: $font-size-base * 3;
+  color: $error-color;
+  .icon {
+    margin-right: 10px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 20px 0;
+}
