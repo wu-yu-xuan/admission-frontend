@@ -2,6 +2,12 @@ import * as React from 'react';
 import useRedirect from '../useRedirect';
 import MenuRouter, { MenuRouterInfo } from 'src/components/MenuRouter';
 import BodyContainer from 'src/components/BodyContainer';
+import ContentContainer from 'src/components/ContentContainer';
+import { Route, Switch } from 'react-router';
+import Grade from './Grade';
+import Volunteer from './Volunteer';
+import Info from './Info';
+import Situation from './Situation';
 
 const menuRouterConfig: MenuRouterInfo[] = [
   {
@@ -27,6 +33,14 @@ export default function Student() {
   return (
     <BodyContainer>
       <MenuRouter menuRouterInfos={menuRouterConfig} />
+      <ContentContainer>
+        <Switch>
+          <Route path='/student/grade' component={Grade} />
+          <Route path='/student/situation' component={Situation} />
+          <Route path='/student/info' component={Info} />
+          <Route path='/student' component={Volunteer} />
+        </Switch>
+      </ContentContainer>
     </BodyContainer>
   )
 }

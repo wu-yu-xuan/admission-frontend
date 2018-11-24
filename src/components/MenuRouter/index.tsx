@@ -1,4 +1,3 @@
-import { withRouter, RouteComponentProps } from 'react-router';
 import { Menu } from 'antd';
 import * as React from 'react';
 import * as style from './style.scss';
@@ -15,12 +14,14 @@ interface MenuRouterProps {
   menuRouterInfos: MenuRouterInfo[];
 }
 
-export default withRouter(function MenuRouter({ menuRouterInfos, history }: MenuRouterProps & RouteComponentProps<{}>) {
+export default function MenuRouter({ menuRouterInfos }: MenuRouterProps) {
+  const sortInfos = [...menuRouterInfos].sort((a, b) => b.to.length - a.to.length);
+  const activeKey = menuRouterInfos.findIndex(value => value === sortInfos[sortInfos.findIndex(({ to }) => location.pathname.startsWith(to))]);
   return (
     <Menu
       mode="inline"
       theme="light"
-      defaultSelectedKeys={["0"]}
+      selectedKeys={[activeKey.toString()]}
       className={style.menu}
       inlineIndent={150}
     >
@@ -31,4 +32,4 @@ export default withRouter(function MenuRouter({ menuRouterInfos, history }: Menu
       ))}
     </Menu>
   )
-});
+}

@@ -1,4 +1,5 @@
 .body {
   min-height: calc(100vh - #{$height-header + 10px});
   display: flex;
+  padding-top: 40px;
 }
