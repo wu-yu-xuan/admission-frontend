@@ -1,0 +1,10 @@
+{
+  "description": "查看招生信息",
+  "request": {
+    "college": "TG"
+  },
+  "response": {
+    "code": 0,
+    "data": 666
+  }
+}
