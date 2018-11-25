@@ -1,0 +1,55 @@
+.icon {
+  margin-right: 10px;
+}
+
+.loading,
+.forbidden,
+.success {
+  font-size: $font-size-base * 1.5;
+  height: $font-size-base * 3;
+  line-height: $font-size-base * 3;
+}
+
+.forbidden {
+  color: $error-color;
+}
+
+.success {
+  color: $primary-color;
+}
+
+.college,
+.profession {
+  animation-name: animation;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  transform-origin: left center;
+  margin-bottom: .3em;
+  width: 300px;
+  opacity: 0;
+}
+
+.college {
+  font-size: $font-size-base * 5;
+  height: $font-size-base * 7;
+  line-height: $font-size-base * 7;
+}
+
+.profession {
+  font-size: $font-size-base * 3.5;
+  height: $font-size-base * 5;
+  line-height: $font-size-base * 5;
+  animation-delay: .3s;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: scale(3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

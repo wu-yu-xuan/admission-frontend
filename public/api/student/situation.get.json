@@ -1,0 +1,11 @@
+{
+  "description": "获取录取情况",
+  "request": {},
+  "response": {
+    "code": 0,
+    "data": {
+      "college": "江苏大学",
+      "profession": "三个代表"
+    }
+  }
+}

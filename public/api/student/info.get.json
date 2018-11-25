@@ -1,0 +1,29 @@
+{
+  "description": "查看招生信息",
+  "request": {
+    "college": "TG"
+  },
+  "response": {
+    "code": 0,
+    "data": [
+      {
+        "key": 0,
+        "profession": "三个代表",
+        "batch":"提前批",
+        "count": 3
+      },
+      {
+        "key": 1,
+        "profession": "八荣八耻",
+        "batch":"提前批",
+        "count": 8
+      },
+      {
+        "key": 2,
+        "profession": "总计",
+        "batch":"提前批",
+        "count": 13
+      }
+    ]
+  }
+}

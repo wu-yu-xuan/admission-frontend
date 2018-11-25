@@ -32,11 +32,11 @@ const formatUrl = async (url: string, query = {}) => {
 interface Ajax {
     url: string;
     data?: {};
-    method: 'POST' | 'GET' | 'HEAD' | 'PUT' | 'DELETE';
+    method?: 'POST' | 'GET' | 'HEAD' | 'PUT' | 'DELETE';
     onError?(): void;
 }
 
-export default async <T = any>({ url, data = {}, method, onError }: Ajax): Promise<ResponseProd<T>> => {
+export default async <T = any>({ url, data = {}, method = 'GET', onError }: Ajax): Promise<ResponseProd<T>> => {
     const { origin } = window.location;
     const credentials = 'same-origin';
     const headers = {
