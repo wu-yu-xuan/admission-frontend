@@ -4,3 +4,20 @@
   padding: 10px;
   margin: 10px;
 }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 35px;
+  margin: 5px 0;
+}
+
+.label {
+  width: 15%;
+  font-size: $font-size-base + 2px;
+}
+
+.input {
+  width: 80%;
+}

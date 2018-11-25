@@ -1,5 +1,6 @@
 .menu {
   width: 400px;
+  flex-shrink: 0;
   li,
   a {
     font-size: $font-size-base + 2px;

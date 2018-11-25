@@ -1,0 +1,68 @@
+{
+  "description": "提交志愿",
+  "request": [
+    {
+      "college": "",
+      "professions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "isObey": false
+    },
+    {
+      "college": "",
+      "professions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "isObey": false
+    },
+    {
+      "college": "",
+      "professions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "isObey": false
+    },
+    {
+      "college": "",
+      "professions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "isObey": false
+    },
+    {
+      "college": "",
+      "professions": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "isObey": false
+    }
+  ],
+  "response": {
+    "code": 0
+  }
+}
