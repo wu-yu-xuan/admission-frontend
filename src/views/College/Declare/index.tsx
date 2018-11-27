@@ -74,7 +74,7 @@ export default function Declare() {
         <div className={style.row}>
           <label className={style.proportionLabel}>调档比例: </label>
           <Group onChange={handleProportionChange} value={proportion}>
-            <RadioButton value={1} key="0">1</RadioButton>
+            <RadioButton value={1.0} key="0">1.0</RadioButton>
             <RadioButton value={1.1} key="1">1.1</RadioButton>
             <RadioButton value={1.2} key="2">1.2</RadioButton>
           </Group>

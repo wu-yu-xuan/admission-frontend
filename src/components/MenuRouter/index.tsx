@@ -17,6 +17,7 @@ interface MenuRouterProps {
 export default function MenuRouter({ menuRouterInfos }: MenuRouterProps) {
   const sortInfos = [...menuRouterInfos].sort((a, b) => b.to.length - a.to.length);
   const activeKey = menuRouterInfos.findIndex(value => value === sortInfos[sortInfos.findIndex(({ to }) => location.pathname.startsWith(to))]);
+  document.title = `${menuRouterInfos[activeKey].text.toString()} - 高考志愿填报系统`;
   return (
     <Menu
       mode="inline"
