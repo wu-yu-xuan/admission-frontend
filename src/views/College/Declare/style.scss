@@ -1,0 +1,43 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.proportion-label {
+  font-size: $font-size-base + 2px;
+  margin-right: 10px;
+}
+
+.profession-label {
+  font-size: $font-size-base + 2px;
+  margin-top: 10px;
+  margin-bottom: .3em;
+}
+
+.button {
+  margin-top: 15px;
+}
+
+.batch-radio-group {
+  display: flex;
+  width: 300px;
+}
+
+.table {
+  :global {
+    .ant-table-footer {
+      padding: 0;
+    }
+  }
+}
+
+.success {
+  color: $success-color;
+  font-size: $font-size-base * 1.5;
+  height: $font-size-base * 3;
+  line-height: $font-size-base * 3;
+}
+
+.icon {
+  margin-right: 10px;
+}

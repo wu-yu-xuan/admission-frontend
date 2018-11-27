@@ -1,0 +1,15 @@
+{
+  "description": "申报招生信息 id:专业号",
+  "request": [
+    {
+      "key": 0,
+      "name": "三个代表",
+      "id": 0,
+      "population": 1,
+      "batch": 0
+    }
+  ],
+  "response": {
+    "code": 0
+  }
+}
