@@ -1,0 +1,23 @@
+{
+  "description": "是否允许招生,data为允许招生人数,null/[]为不允许招生",
+  "request": {
+    "type":"统招|特招|调招"
+  },
+  "response": {
+    "code": 0,
+    "data": [
+      {
+        "name": "专业名",
+        "population": 10
+      },
+      {
+        "name": "专业名",
+        "population": 10
+      },
+      {
+        "name": "专业名",
+        "population": 10
+      }
+    ]
+  }
+}

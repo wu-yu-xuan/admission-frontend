@@ -26,7 +26,7 @@ interface ProfessionData {
 export default function Declare() {
   const [proportion, handleProportionChange] = useProportion();
   const [profession, handleChange, addData] = useProfession();
-  const [success, handleSubmit] = useSubmit(profession);
+  const [success, handleSubmit] = useSubmit({ proportion, profession });
 
   if (success) {
     return (
@@ -87,7 +87,7 @@ export default function Declare() {
   )
 }
 
-function useSubmit(data: ProfessionData[]): [boolean, (e: React.FormEvent<HTMLFormElement>) => Promise<void>] {
+function useSubmit(data: { proportion: number, profession: ProfessionData[] }): [boolean, (e: React.FormEvent<HTMLFormElement>) => Promise<void>] {
   const [success, setSuccess] = React.useState(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
