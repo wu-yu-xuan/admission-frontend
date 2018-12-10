@@ -3,6 +3,7 @@ import ContentTitle from 'src/components/ContentTitle';
 import ajax from 'src/utility/ajax';
 import { message } from 'antd';
 import Profession from './Profession';
+import EnrollTable from './EnrollTable';
 
 type titles = '统招' | '特招' | '调招';
 
@@ -15,17 +16,30 @@ export interface EnrollData {
   population: number
 }
 
+export enum EnrollDataOp {
+  increment,
+  decrement
+}
+
 function Enroll({ title }: EnrollProps) {
-  const [enroll] = useEnroll(title);
+  const [enroll, setEnroll] = useEnroll(title);
   return (
     <>
       <ContentTitle>{title}</ContentTitle>
-      <Profession data={enroll} />
+      {
+        (enroll && enroll.length) ? (
+          <>
+            <Profession data={enroll} />
+            <EnrollTable setEnroll={setEnroll} />
+          </>
+        ) :
+          <h1>招生工作已经结束</h1>
+      }
     </>
   )
 }
 
-function useEnroll(type: titles): [EnrollData[], (data: EnrollData) => void] {
+function useEnroll(type: titles): [EnrollData[], (name: string, op: EnrollDataOp) => void] {
   const [enroll, setEnroll] = React.useState<EnrollData[]>([]);
   React.useEffect(() => {
     (async () => {
@@ -33,13 +47,24 @@ function useEnroll(type: titles): [EnrollData[], (data: EnrollData) => void] {
       setEnroll(json.data);
     })();
   }, []);
-  function setEnrollData(data: EnrollData) {
-    const index = enroll.findIndex(v => v.name === data.name);
+  function setEnrollData(name: string, op: EnrollDataOp) {
+    const index = enroll.findIndex(v => v.name === name);
     if (index < 0) {
-      message.error("查找目标专业失败");
       return;
     }
-    enroll[index] = data;
+    switch (op) {
+      case EnrollDataOp.decrement:
+        enroll[index].population = enroll[index].population - 1;
+        if (enroll[index].population <= 0) {
+          message.warning(`${enroll[index].name}剩余人数不足!`);
+        }
+        break;
+      case EnrollDataOp.increment:
+        enroll[index].population = enroll[index].population + 1;
+        break;
+      default:
+        break;
+    }
     setEnroll(enroll);
   }
   return [enroll, setEnrollData];

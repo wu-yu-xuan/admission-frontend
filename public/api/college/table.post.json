@@ -1,0 +1,44 @@
+{
+  "description": "招生表格数据",
+  "request": {
+    "professions": [
+      {
+        "key": 0,
+        "profession": "233"
+      },
+      {
+        "key": 1,
+        "profession": "466"
+      }
+    ]
+  },
+  "response": {
+    "code": 0,
+    "data": [
+      {
+        "key": 0,
+        "name": "张三",
+        "grade": 300,
+        "professions": []
+      },
+      {
+        "key": 1,
+        "name": "张三",
+        "grade": 300,
+        "professions": [
+          "233",
+          "466"
+        ]
+      },
+      {
+        "key": 2,
+        "name": "张三",
+        "grade": 300,
+        "professions": [
+          "233",
+          "466"
+        ]
+      }
+    ]
+  }
+}

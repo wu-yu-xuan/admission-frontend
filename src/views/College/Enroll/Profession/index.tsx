@@ -18,6 +18,7 @@ export default function Profession({ data }: ProfessionProps) {
           </span>
         ))}
       </div>
+      <hr />
     </>
   )
 }
