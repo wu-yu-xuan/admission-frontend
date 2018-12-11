@@ -1,0 +1,44 @@
+{
+  "description": "获取录取情况",
+  "request": {},
+  "response": {
+    "code": 0,
+    "data": [
+      {
+        "key": 0,
+        "name": "233",
+        "grade": 466,
+        "school": "南通高中",
+        "type": "统招"
+      },
+      {
+        "key": 1,
+        "name": "233",
+        "grade": 520,
+        "school": "南通高中",
+        "type": "调招"
+      },
+      {
+        "key": 2,
+        "name": "233",
+        "grade": 336,
+        "school": "南通高中",
+        "type": "统招"
+      },
+      {
+        "key": 3,
+        "name": "233",
+        "grade": 512,
+        "school": "南通高中",
+        "type": "特招"
+      },
+      {
+        "key": 4,
+        "name": "233",
+        "grade": 256,
+        "school": "南通高中",
+        "type": "统招"
+      }
+    ]
+  }
+}

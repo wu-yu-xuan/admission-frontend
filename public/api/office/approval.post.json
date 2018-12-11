@@ -1,0 +1,11 @@
+{
+  "description": "提交审批",
+  "request": [
+    "南通大学",
+    "武汉大学"
+  ],
+  "response": {
+    "code": 0,
+    "data": {}
+  }
+}

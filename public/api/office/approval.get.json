@@ -1,0 +1,37 @@
+{
+  "description": "获取审批",
+  "request": {},
+  "response": {
+    "code": 0,
+    "data": [
+      {
+        "school": "南通大学",
+        "population": 233,
+        "professions": [
+          {
+            "profession": "通信",
+            "population": 666
+          },
+          {
+            "profession": "网络",
+            "population": 466
+          }
+        ]
+      },
+      {
+        "school": "南通大学",
+        "population": 233,
+        "professions": [
+          {
+            "profession": "通信",
+            "population": 666
+          },
+          {
+            "profession": "网络",
+            "population": 466
+          }
+        ]
+      }
+    ]
+  }
+}

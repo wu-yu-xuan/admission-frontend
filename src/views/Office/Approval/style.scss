@@ -1,0 +1,22 @@
+.profession {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  margin-right: 60px;
+  .name {
+    width: 80px;
+  }
+  .population {
+    width: 50px;
+  }
+}
+
+.profession-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin-top: 20px;
+}

@@ -1,0 +1,8 @@
+{
+  "description": "下载Excel文件",
+  "request": {},
+  "response": {
+    "code": 0,
+    "data": "base64"
+  }
+}
