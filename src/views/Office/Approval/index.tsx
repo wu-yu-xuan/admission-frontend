@@ -21,12 +21,12 @@ export default function Approval() {
   const approvalData = useApprovalData();
   const [approvalChecks, updateApprovalChecks] = useApprovalChecks();
   async function handleButtonClick() {
-    const data = [];
-    for (const i of Object.keys(approvalData)) {
-      if (approvalChecks[i]) {
-        data.push(approvalData[i].school);
+    const data = approvalChecks.reduce<string[]>((arr: string[], v, i) => {
+      if (v) {
+        arr.push(approvalData[i].school);
       }
-    }
+      return arr;
+    }, []);
     const json = await ajax({
       url: 'office/approval',
       data

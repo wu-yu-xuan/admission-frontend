@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Button, message } from 'antd';
 import ajax, { Code } from 'src/utility/ajax';
-import ContentTitle from 'src/components/ContentTitle';
 
 const handleButtonClick = (ref: React.MutableRefObject<HTMLAnchorElement>) => async () => {
   const json = await ajax<string>({ url: 'college/excel' });
@@ -20,7 +19,6 @@ export default React.memo(function DownloadButton() {
   const ref = React.useRef<HTMLAnchorElement>(null);
   return (
     <>
-      <ContentTitle>录取情况</ContentTitle>
       <Button size="large" type="primary" onClick={handleButtonClick(ref)}>下载数据</Button>
       <a hidden={true} ref={ref} />
     </>

@@ -3,6 +3,7 @@ import * as React from 'react';
 import ajax, { Code } from 'src/utility/ajax';
 import { ColumnProps } from 'antd/lib/table';
 import DownloadButton from './DownloadButton';
+import ContentTitle from 'src/components/ContentTitle';
 
 interface SituationData {
   key: number | string;
@@ -49,6 +50,7 @@ export default function Situation() {
   const situation = useSituation();
   return (
     <>
+      <ContentTitle>录取情况</ContentTitle>
       <Table dataSource={situation} columns={columns} />
       <DownloadButton />
     </>
