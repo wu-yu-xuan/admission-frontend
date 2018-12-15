@@ -31,9 +31,15 @@ export default function EnrollTable({ setEnroll }: EnrollTableProps) {
     return <h1>所有考生已处理完毕</h1>
   }
   const handleRadioOrInputChange = (key: string | number) => (e: RadioChangeEvent | React.ChangeEvent<HTMLInputElement>) => {
-    professions[key] && setEnroll(professions[key], EnrollDataOp.increment);
-    professions[key] = e.target.value;
-    setEnroll(professions[key], EnrollDataOp.decrement);
+    const profession = e.target.value;
+    const index = professions.findIndex(v => v.key === key);
+    if (index === -1) {
+      professions.push({ key, profession });
+    } else {
+      setEnroll(professions[index].profession, EnrollDataOp.increment);
+      professions[index].profession = profession;
+    }
+    setEnroll(profession, EnrollDataOp.decrement);
     setProfessions(professions);
   }
   const columns: Array<ColumnProps<EnrollTableData>> = [
@@ -49,19 +55,25 @@ export default function EnrollTable({ setEnroll }: EnrollTableProps) {
     }, {
       title: '专业',
       dataIndex: 'professions',
-      render: (text: string[], { key }) => (
-        text && text.length ? (
-          <Group value={professions[key] || null} onChange={handleRadioOrInputChange(key)} className={style.radioGroup}>
-            {text.map((v, index) => <Radio key={index} value={v}>{v}</Radio>)}
-          </Group>
-        ) : (
-            <Input value={professions[key] || ''} onChange={handleRadioOrInputChange(key)} />
+      render: (text: string[], { key }) => {
+        const index = professions.findIndex(v => v.key === key);
+        if (text && text.length) {
+          return (
+            <Group value={index > -1 ? professions[index].profession : null} onChange={handleRadioOrInputChange(key)} className={style.radioGroup}>
+              {text.map((v, k) => <Radio key={k} value={v}>{v}</Radio>)}
+            </Group>
           )
-      )
+        } else {
+          return (
+            <Input value={index > -1 ? professions[index].profession : ''} onChange={handleRadioOrInputChange(key)} />
+          )
+        }
+      }
     }
   ];
   function handleNextPageClick() {
     updateEnrollTableData(professions);
+    console.log(professions);
   }
   function handleRetreat() {
     Modal.confirm({
