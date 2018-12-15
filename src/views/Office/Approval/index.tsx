@@ -29,6 +29,7 @@ export default function Approval() {
     }, []);
     const json = await ajax({
       url: 'office/approval',
+      method: 'POST',
       data
     });
     if (json.code === Code.success) {
